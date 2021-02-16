@@ -1,0 +1,763 @@
+/*
+
+Template Name: Delicious
+Template Url: https://fate92ma.github.io/Delicious
+Contact Me: fatema131khaled@gmail.com
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box
+}
+
+button,
+a {
+    cursor: pointer
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    max-width: 100%
+}
+
+:root {
+    --main: #FFB03B;
+    --border: #565656
+}
+
+/* Intro */
+
+.intro {
+    background: url(../img/banner-bg.jpg) 0 0/cover;
+    height: 657px;
+    position: relative;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.text1 {
+    position: relative;
+    text-align: center;
+    top: 35%;
+}
+
+.text1 h1,
+.text1 p {
+    color: var(--main);
+    font-family: 'Satisfy', sans-serif;
+}
+
+.text1 h1 {
+    font-size: 65px;
+}
+
+.text1 p {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.text1 span {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 35px;
+    color: white;
+}
+
+.toggle,
+.close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.menu,
+.close {
+    border-radius: 4px;
+    cursor: pointer
+}
+
+.sidebar {
+    z-index: 10;
+    background: #111;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 10000
+}
+
+.ul-slide {
+    margin-top: 75px;
+    margin-left: 25px
+}
+
+.ul-slide li {
+    margin-bottom: 15px
+}
+
+.ul-slide li a {
+    font-family: 'PT Sans', sans-serif;
+    color: var(--border);
+    font-weight: normal;
+    font-size: 26px
+}
+
+.ul-slide li a:hover {
+    color: white
+}
+
+@media (max-width: 850px) {
+    .text1 p {
+        font-size: 40px
+    }
+}
+
+@media (max-width: 750px) {
+    .text1 p {
+        font-size: 35px
+    }
+
+    .text1 span {
+        font-size: 30px
+    }
+}
+
+@media (max-width: 650px) {
+    .text1 p {
+        font-size: 30px;
+    }
+
+    .text1 span {
+        font-size: 25px
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        width: 100%
+    }
+}
+
+@media (max-width: 350px) {
+    .text1 p {
+        font-size: 25px
+    }
+
+    .text1 span {
+        font-size: 20px
+    }
+}
+
+@media (max-width: 300px) {
+    .text1 h1 {
+        font-size: 55px
+    }
+}
+
+/* Journey */
+
+#journey,
+#event,
+#menu1,
+#book,
+footer {
+    padding: 50px 0
+}
+
+.main-h2 {
+    color: var(--main);
+    font-family: 'Satisfy', sans-serif;
+    text-align: center;
+    font-size: 54px
+}
+
+.main-p {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--border);
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 40px
+}
+
+.container1 {
+    width: 75%;
+    margin: auto;
+    display: flex
+}
+
+.left1,
+.right1 {
+    flex: 1
+}
+
+.left1 {
+    align-self: center;
+    margin-right: 25px
+}
+
+.left1 strong {
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: var(--main);
+    font-family: 'Satisfy', sans-serif
+}
+
+.left1 p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: var(--border);
+    font-family: 'PT Sans', sans-serif;
+    line-height: 24px
+}
+
+.left1 li {
+    color: var(--border);
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 5px
+}
+
+.left1 li i {
+    margin-left: 65px;
+    color: var(--main);
+    margin-right: 10px
+}
+
+.right1 img {
+    border: 5px solid var(--main);
+    flex: 1
+}
+
+@media (max-width: 1170px) {
+    .main-p {
+        width: 50%
+    }
+
+    .container1 {
+        width: 92%
+    }
+}
+
+@media (max-width: 1000px) {
+    .container1 {
+        flex-direction: column;
+        width: 75%
+    }
+
+    .left1 {
+        margin-right: 0
+    }
+
+    .right1 {
+        margin-top: 25px
+    }
+}
+
+@media (max-width: 940px) {
+    .main-p {
+        width: 60%
+    }
+}
+
+@media (max-width: 790px) {
+    .main-p {
+        width: 70%
+    }
+}
+
+@media (max-width: 675px) {
+    .main-p {
+        width: 80%
+    }
+}
+
+@media (max-width: 575px) {
+    .main-h2 {
+        font-size: 50px
+    }
+
+    .main-p {
+        width: 90%
+    }
+
+    .container1 {
+        width: 94%
+    }
+}
+
+@media (max-width: 525px) {
+    .left1 {
+        text-align: center
+    }
+
+    .left1 li i {
+        margin-left: 0
+    }
+}
+
+@media (max-width: 500px) {
+    .main-h2 {
+        font-size: 45px
+    }
+
+    .main-p {
+        width: 98%
+    }
+}
+
+@media (max-width: 450px) {
+    .main-h2 {
+        font-size: 40px
+    }
+
+    .left1 p,
+    .left1 li,
+    .main-p {
+        font-size: 15px
+    }
+}
+
+@media (max-width: 350px) {
+    .main-h2 {
+        font-size: 35px
+    }
+}
+
+@media (max-width: 300px) {
+    .main-h2 {
+        font-size: 32px
+    }
+}
+
+/* Event */
+
+.event {
+    background: url(../img/res02.jpg) 0 0/cover;
+    height: 650px;
+    position: relative
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.text2 {
+    position: relative
+}
+
+.container2 {
+    position: relative;
+    margin-top: 70px;
+    width: 75%;
+    margin: auto;
+    display: flex
+}
+
+.left2,
+.right2 {
+    flex: 1
+}
+
+.right2 {
+    background: rgba(0, 0, 0, 0.5);
+    border-right: 2px solid var(--main);
+    padding: 20px 20px 30px 30px
+}
+
+.right2 strong {
+    letter-spacing: 2px;
+    font-size: 26px;
+    color: var(--main);
+    font-family: 'Satisfy', sans-serif
+}
+
+.right2 p {
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    line-height: 22px;
+    letter-spacing: 2px;
+    margin: 15px 0
+}
+
+.right2 li,
+.eventp {
+    font-family: 'PT Sans', sans-serif;
+    color: white
+}
+
+.right2 li span {
+    font-weight: bold;
+    color: var(--main)
+}
+
+.right2 a {
+    border-radius: 6px;
+    width: fit-content;
+    padding: 7px;
+    font-family: 'PT Sans', sans-serif;
+    background: var(--main);
+    margin-top: 25px;
+    display: block
+}
+
+@media (max-width: 1250px) {
+    .container2 {
+        width: 96%
+    }
+}
+
+@media (max-width: 850px) {
+    .container2 {
+        text-align: center
+    }
+
+    .left2 {
+        display: none
+    }
+
+    .right2 {
+        border: 2px solid var(--main)
+    }
+
+    .right2 a {
+        margin: auto
+    }
+}
+
+@media (max-width: 350px) {
+    .right2 {
+        padding: 10px 10px 15px 15px
+    }
+}
+
+@media (max-width: 275px) {
+    .container2 {
+        margin-top: 0
+    }
+}
+
+@media (max-width: 250px) {
+    .right2 {
+        padding: 5px 5px 10px 10px
+    }
+}
+
+/* Menu */
+
+.container3 {
+    width: 75%;
+    margin: auto
+}
+
+.tabs {
+    text-align: center;
+    margin-bottom: 25px
+}
+
+.tabs li {
+    display: inline-block;
+    border: 1px solid #ccc;
+    color: var(--border);
+    font-family: 'PT Sans', sans-serif;
+    padding: 8px;
+    cursor: pointer
+}
+
+.active {
+    background: var(--main)
+}
+
+#breakfast,
+#lunch,
+#dinner {
+    display: none
+}
+
+#breakfast {
+    display: block
+}
+
+.container4 {
+    display: flex;
+    width: 98%;
+    margin: auto
+}
+
+.container4 li {
+    display: flex;
+    font-family: 'PT Sans', sans-serif;
+    width: 92%;
+    justify-content: space-between;
+    margin-bottom: 40px
+}
+
+.container4 li strong {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--main);
+    position: relative
+}
+
+.container4 li strong::after {
+    position: absolute;
+    content: "";
+    background: #ccc;
+    height: 1px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 225px
+}
+
+.container4 li strong:hover {
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.container4 li small {
+    color: var(--border);
+    font-weight: bold;
+    font-size: 16px
+}
+
+.left3,
+.right3 {
+    flex: 1
+}
+
+@media (max-width: 1212px) {
+    .container3 {
+        width: 98%
+    }
+}
+
+@media (max-width: 950px) {
+    .container4 li strong::after {
+        display: none
+    }
+}
+
+@media (max-width: 550px) {
+    .container4 {
+        flex-direction: column
+    }
+
+    .container4 li {
+        width: 100%
+    }
+}
+
+/* Book */
+
+#book {
+    background: rgba(221, 221, 221, 0.33)
+}
+
+.container5 {
+    padding-top: 40px;
+    display: flex;
+    width: 85%;
+    margin: auto;
+    font-family: 'PT Sans', sans-serif
+}
+
+.pre {
+    flex: 1;
+    margin-right: 25px
+}
+
+.pre1 {
+    display: flex;
+    margin-bottom: 40px
+}
+
+.pre1 i {
+    margin-right: 15px;
+    color: white;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 50%
+}
+
+.pre11 i {
+    background: #fecc17
+}
+
+.pre111 i {
+    background: #ccdb38
+}
+
+.pre1 strong {
+    color: var(--border);
+    align-self: center
+}
+
+.pre1 strong span:nth-of-type(1) {
+    font-size: 22px
+}
+
+.pre1 strong span:nth-of-type(2),
+.pre1 strong span:nth-of-type(3) {
+    font-weight: normal;
+    font-size: 15px
+}
+
+.form {
+    flex: 2
+}
+
+.line {
+    display: flex;
+    margin-bottom: 40px
+}
+
+.line input,
+.line textarea {
+    margin-right: 10px;
+    width: 98%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    padding-left: 0;
+    background: transparent
+}
+
+.line textarea {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 0
+}
+
+.form a {
+    border-radius: 6px;
+    width: fit-content;
+    padding: 10px 30px;
+    background: var(--main);
+    margin-top: 40px;
+    display: block
+}
+
+@media (max-width: 1150px) {
+    .container5 {
+        width: 96%
+    }
+}
+
+@media (max-width: 900px) {
+    .container5 {
+        flex-direction: column
+    }
+
+    .pre {
+        display: block;
+        margin: auto
+    }
+
+    .pre1 {
+        flex-direction: column;
+        text-align: center
+    }
+
+    .pre1 i {
+        margin-right: 0;
+        margin-bottom: 7px;
+        align-self: center
+    }
+
+    .line {
+        flex-direction: column;
+        margin-bottom: 0
+    }
+
+    .line input,
+    .line textarea {
+        margin-right: 0;
+        margin-bottom: 25px
+    }
+
+    .form a {
+        margin-top: 25px;
+        margin: auto
+    }
+
+}
+
+/* Footer */
+
+footer {
+    background: #222
+}
+
+.text3 {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.text3 h2 {
+    color: var(--main);
+    font-size: 44px;
+    font-family: 'Satisfy', sans-serif
+}
+
+.text3 p,
+.text3 span {
+    font-family: 'PT Sans', sans-serif;
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 40px
+}
+
+.icon i {
+    margin: 10px;
+    color: white;
+    cursor: pointer
+}
+
+.icon i:hover {
+    color: var(--main)
+}
+
+.text3 span {
+    margin-bottom: 0
+}
