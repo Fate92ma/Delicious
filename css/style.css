@@ -38,17 +38,26 @@ img {
     max-width: 100%
 }
 
+/* Start Root */
+
 :root {
     --main: #FFB03B;
-    --border: #565656
+    --border: #565656;
+    --white: #fff;
+    --satisfy: 'Satisfy';
+    --pt: 'PT Sans'
 }
 
-/* Intro */
+/* End Root */
+
+/* Start Intro */
 
 .intro {
     background: url(../img/banner-bg.jpg) 0 0/cover;
-    height: 657px;
+    height: 100vh;
     position: relative;
+    display: table;
+    width: 100%
 }
 
 .intro::before {
@@ -63,18 +72,19 @@ img {
 
 .text1 {
     position: relative;
-    text-align: center;
-    top: 35%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center
 }
 
 .text1 h1,
 .text1 p {
     color: var(--main);
-    font-family: 'Satisfy', sans-serif;
+    font-family: var(--satisfy)
 }
 
 .text1 h1 {
-    font-size: 65px;
+    font-size: 60px;
 }
 
 .text1 p {
@@ -83,15 +93,16 @@ img {
 }
 
 .text1 span {
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--pt);
     font-size: 35px;
-    color: white;
+    color: var(--white);
 }
 
 .toggle,
 .close {
-    position: absolute;
-    right: 30px;
+    position: relative;
+    z-index: 10;
+    left: 20px;
     top: 30px;
 }
 
@@ -109,7 +120,7 @@ img {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
+    left: 0;
     display: none;
     z-index: 10000
 }
@@ -124,126 +135,81 @@ img {
 }
 
 .ul-slide li a {
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--pt);
     color: var(--border);
     font-weight: normal;
     font-size: 26px
 }
 
 .ul-slide li a:hover {
-    color: white
+    color: var(--white)
 }
 
-@media (max-width: 850px) {
-    .text1 p {
-        font-size: 40px
-    }
-}
-
-@media (max-width: 750px) {
-    .text1 p {
-        font-size: 35px
-    }
-
-    .text1 span {
-        font-size: 30px
-    }
-}
-
-@media (max-width: 650px) {
-    .text1 p {
-        font-size: 30px;
-    }
-
-    .text1 span {
-        font-size: 25px
-    }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .sidebar {
         width: 100%
     }
 }
 
-@media (max-width: 350px) {
-    .text1 p {
-        font-size: 25px
-    }
+/* End Intro */
 
-    .text1 span {
-        font-size: 20px
-    }
-}
-
-@media (max-width: 300px) {
-    .text1 h1 {
-        font-size: 55px
-    }
-}
-
-/* Journey */
+/* Start Journey */
 
 #journey,
 #event,
 #menu1,
 #book,
 footer {
-    padding: 50px 0
+    padding: 50px 10px
 }
 
 .main-h2 {
     color: var(--main);
-    font-family: 'Satisfy', sans-serif;
+    font-family: var(--satisfy);
     text-align: center;
     font-size: 54px
 }
 
 .main-p {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     text-align: center;
     color: var(--border);
-    font-family: 'PT Sans', sans-serif;
-    margin-bottom: 40px
+    font-family: var(--pt);
 }
 
 .container1 {
     width: 75%;
-    margin: auto;
+    margin: 40px auto;
     display: flex
 }
 
 .left1,
 .right1 {
-    flex: 1
+    flex: 1;
+    align-self: center;
 }
 
 .left1 {
-    align-self: center;
-    margin-right: 25px
+    padding: 10px
 }
 
 .left1 strong {
-    letter-spacing: 2px;
     font-size: 24px;
     color: var(--main);
-    font-family: 'Satisfy', sans-serif
+    font-family: var(--satisfy)
 }
 
 .left1 p {
     margin-top: 5px;
-    margin-bottom: 15px;
     color: var(--border);
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--pt);
     line-height: 24px
 }
 
 .left1 li {
     color: var(--border);
-    font-family: 'PT Sans', sans-serif;
-    margin-bottom: 5px
+    font-family: var(--pt);
+    margin-top: 10px
 }
 
 .left1 li i {
@@ -257,65 +223,22 @@ footer {
     flex: 1
 }
 
-@media (max-width: 1170px) {
-    .main-p {
-        width: 50%
-    }
-
+@media (max-width: 1200px) {
     .container1 {
-        width: 92%
+        width: 85%
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
+    .container1 {
+        width: 96%
+    }
+}
+
+@media (max-width: 768px) {
     .container1 {
         flex-direction: column;
-        width: 75%
-    }
-
-    .left1 {
-        margin-right: 0
-    }
-
-    .right1 {
-        margin-top: 25px
-    }
-}
-
-@media (max-width: 940px) {
-    .main-p {
-        width: 60%
-    }
-}
-
-@media (max-width: 790px) {
-    .main-p {
-        width: 70%
-    }
-}
-
-@media (max-width: 675px) {
-    .main-p {
-        width: 80%
-    }
-}
-
-@media (max-width: 575px) {
-    .main-h2 {
-        font-size: 50px
-    }
-
-    .main-p {
-        width: 90%
-    }
-
-    .container1 {
-        width: 94%
-    }
-}
-
-@media (max-width: 525px) {
-    .left1 {
+        width: 75%;
         text-align: center
     }
 
@@ -324,45 +247,19 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
-    .main-h2 {
-        font-size: 45px
-    }
-
-    .main-p {
-        width: 98%
+@media (max-width: 480px) {
+    .container1 {
+        width: 96%
     }
 }
 
-@media (max-width: 450px) {
-    .main-h2 {
-        font-size: 40px
-    }
+/* End Journey */
 
-    .left1 p,
-    .left1 li,
-    .main-p {
-        font-size: 15px
-    }
-}
-
-@media (max-width: 350px) {
-    .main-h2 {
-        font-size: 35px
-    }
-}
-
-@media (max-width: 300px) {
-    .main-h2 {
-        font-size: 32px
-    }
-}
-
-/* Event */
+/* Start Event */
 
 .event {
     background: url(../img/res02.jpg) 0 0/cover;
-    height: 650px;
+    height: fit-content;
     position: relative
 }
 
@@ -384,40 +281,39 @@ footer {
     position: relative;
     margin-top: 70px;
     width: 75%;
-    margin: auto;
+    margin: 40px auto;
     display: flex
 }
 
 .left2,
 .right2 {
+    align-self: center;
     flex: 1
 }
 
 .right2 {
     background: rgba(0, 0, 0, 0.5);
     border-right: 2px solid var(--main);
-    padding: 20px 20px 30px 30px
+    padding: 20px 30px
 }
 
 .right2 strong {
-    letter-spacing: 2px;
     font-size: 26px;
     color: var(--main);
-    font-family: 'Satisfy', sans-serif
+    font-family: var(--satisfy)
 }
 
 .right2 p {
-    font-family: 'PT Sans', sans-serif;
-    color: white;
+    font-family: var(--pt);
+    color: var(--white);
     line-height: 22px;
-    letter-spacing: 2px;
     margin: 15px 0
 }
 
 .right2 li,
 .eventp {
-    font-family: 'PT Sans', sans-serif;
-    color: white
+    font-family: var(--pt);
+    color: var(--white)
 }
 
 .right2 li span {
@@ -429,55 +325,52 @@ footer {
     border-radius: 6px;
     width: fit-content;
     padding: 7px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--pt);
     background: var(--main);
     margin-top: 25px;
     display: block
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1200px) {
+    .container2 {
+        width: 85%
+    }
+}
+
+@media (max-width: 1024px) {
     .container2 {
         width: 96%
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
     .container2 {
+        flex-direction: column;
+        width: 75%;
         text-align: center
     }
 
-    .left2 {
-        display: none
-    }
-
     .right2 {
-        border: 2px solid var(--main)
+        border: none;
+        padding: 10px;
+        border-bottom: 2px solid var(--main)
     }
 
     .right2 a {
-        margin: auto
+        margin: auto;
+        margin-top: 20px
     }
 }
 
-@media (max-width: 350px) {
-    .right2 {
-        padding: 10px 10px 15px 15px
-    }
-}
-
-@media (max-width: 275px) {
+@media (max-width: 480px) {
     .container2 {
-        margin-top: 0
+        width: 96%
     }
 }
 
-@media (max-width: 250px) {
-    .right2 {
-        padding: 5px 5px 10px 10px
-    }
-}
+/* End Event */
 
-/* Menu */
+/* Start Menu */
 
 .container3 {
     width: 75%;
@@ -486,14 +379,14 @@ footer {
 
 .tabs {
     text-align: center;
-    margin-bottom: 25px
+    margin: 25px auto
 }
 
 .tabs li {
     display: inline-block;
     border: 1px solid #ccc;
     color: var(--border);
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--pt);
     padding: 8px;
     cursor: pointer
 }
@@ -514,34 +407,21 @@ footer {
 
 .container4 {
     display: flex;
-    width: 98%;
     margin: auto
 }
 
 .container4 li {
     display: flex;
-    font-family: 'PT Sans', sans-serif;
-    width: 92%;
+    font-family: var(--pt);
     justify-content: space-between;
-    margin-bottom: 40px
+    margin: 10px;
+    align-items: center;
 }
 
 .container4 li strong {
     font-size: 20px;
     font-weight: normal;
     color: var(--main);
-    position: relative
-}
-
-.container4 li strong::after {
-    position: absolute;
-    content: "";
-    background: #ccc;
-    height: 1px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;
-    width: 225px
 }
 
 .container4 li strong:hover {
@@ -560,55 +440,65 @@ footer {
     flex: 1
 }
 
-@media (max-width: 1212px) {
+
+@media (max-width: 1200px) {
     .container3 {
-        width: 98%
+        width: 85%
     }
 }
 
-@media (max-width: 950px) {
-    .container4 li strong::after {
-        display: none
+@media (max-width: 1024px) {
+    .container3 {
+        width: 96%
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
+    .container3 {
+        width: 75%;
+    }
+
     .container4 {
-        flex-direction: column
-    }
-
-    .container4 li {
-        width: 100%
+        flex-direction: column;
     }
 }
 
-/* Book */
+@media (max-width: 480px) {
+    .container3 {
+        width: 96%
+    }
+}
+
+/* End Menu */
+
+/* Start Book */
 
 #book {
     background: rgba(221, 221, 221, 0.33)
 }
 
 .container5 {
-    padding-top: 40px;
     display: flex;
-    width: 85%;
-    margin: auto;
-    font-family: 'PT Sans', sans-serif
+    width: 75%;
+    margin: 40px auto;
+    flex-direction: column;
+    font-family: var(--pt)
 }
 
 .pre {
     flex: 1;
-    margin-right: 25px
+    padding: 10px;
 }
 
 .pre1 {
+    justify-content: center;
     display: flex;
-    margin-bottom: 40px
+    align-items: center;
+    margin-bottom: 20px
 }
 
 .pre1 i {
-    margin-right: 15px;
-    color: white;
+    color: var(--white);
     width: 75px;
     height: 75px;
     line-height: 75px;
@@ -626,11 +516,11 @@ footer {
 
 .pre1 strong {
     color: var(--border);
-    align-self: center
 }
 
 .pre1 strong span:nth-of-type(1) {
-    font-size: 22px
+    font-size: 22px;
+    margin: 10px
 }
 
 .pre1 strong span:nth-of-type(2),
@@ -640,7 +530,7 @@ footer {
 }
 
 .form {
-    flex: 2
+    flex: 1.5
 }
 
 .line {
@@ -651,7 +541,7 @@ footer {
 .line input,
 .line textarea {
     margin-right: 10px;
-    width: 98%;
+    width: 100%;
     outline: 0;
     border: none;
     border-bottom: 1px solid #ccc;
@@ -671,56 +561,49 @@ footer {
     width: fit-content;
     padding: 10px 30px;
     background: var(--main);
-    margin-top: 40px;
+    margin: auto;
     display: block
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
+    .container5 {
+        width: 85%
+    }
+}
+
+@media (max-width: 1024px) {
     .container5 {
         width: 96%
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .container5 {
+        width: 75%;
+    }
+
+    .pre1,
+    .line {
         flex-direction: column
     }
 
-    .pre {
-        display: block;
-        margin: auto
-    }
-
-    .pre1 {
+    .pre1 strong {
+        display: flex;
+        text-align: center;
         flex-direction: column;
-        text-align: center
+        align-items: center;
     }
-
-    .pre1 i {
-        margin-right: 0;
-        margin-bottom: 7px;
-        align-self: center
-    }
-
-    .line {
-        flex-direction: column;
-        margin-bottom: 0
-    }
-
-    .line input,
-    .line textarea {
-        margin-right: 0;
-        margin-bottom: 25px
-    }
-
-    .form a {
-        margin-top: 25px;
-        margin: auto
-    }
-
 }
 
-/* Footer */
+@media (max-width: 480px) {
+    .container5 {
+        width: 96%
+    }
+}
+
+/* End Book */
+
+/* Start Footer */
 
 footer {
     background: #222
@@ -736,12 +619,12 @@ footer {
 .text3 h2 {
     color: var(--main);
     font-size: 44px;
-    font-family: 'Satisfy', sans-serif
+    font-family: var(--satisfy)
 }
 
 .text3 p,
 .text3 span {
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--pt);
     color: #ccc;
     font-size: 16px;
     margin-top: 25px;
@@ -750,7 +633,7 @@ footer {
 
 .icon i {
     margin: 10px;
-    color: white;
+    color: var(--white);
     cursor: pointer
 }
 
@@ -761,3 +644,5 @@ footer {
 .text3 span {
     margin-bottom: 0
 }
+
+/* End Footer */
